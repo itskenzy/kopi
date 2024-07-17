@@ -37,10 +37,10 @@ if (score>0) {
 }
 
 let playernameFromStorage = localStorage.getItem("playername")
-scorespan.innerText =" Kamu Berhasil Mengumpulkan " + score + " kopi, coba lagi ya nanti kalau menang aku beliin kopi";
+scorespan.innerText =" Kamu Berhasil Mengumpulkan " + score + " kopi, coba lagi ya nanti kalau menang aku beliin kopi. butuh 10 kopi ya sayang untuk menang";
 
 //creating chocolate shower only when socre is greater than zero
-if (score>0){
+if (score>10){
     createChocolateShower();
     setInterval(createChocolateShower, 300);
 }
