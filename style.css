@@ -1,12 +1,13 @@
 .header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-radius: 20px;
     background-color: rgb(232 154 52 / 74%);
-    gap: 800px;
+    gap: 10px;
     margin: 10px;
     padding: 5px;
     width: 97%;
+    flex-wrap: wrap;
   }
   
   body {
@@ -15,10 +16,15 @@
     background-size: cover;
     overflow: hidden;
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   h1 {
     color: black;
+    font-size: 1.2rem;
   }
   
   .container {
@@ -28,9 +34,9 @@
   
   #basket {
     position: absolute;
-    width: 10%;
+    width: 20%;
     top: 70%;
-    left: 0%;
+    left: 0;
   }
   
   .skygift {
@@ -43,29 +49,33 @@
     width: 100vw;
   }
   
-  @media screen and (min-width: 325px) and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     body {
-      height: 100vh;
-      width: 100vw;
-      background-size:cover;
-      background-attachment: fixed; 
+      background-size: cover;
       position: relative;
-  
     }
-  
+
     #basket {
-      width: 35%;
+      width: 25%;
+      top: 75%;
     }
-  
+
     .header {
-      gap: 60px;
-      font-size: 0.8rem;
+      gap: 20px;
+      font-size: 1rem;
+      flex-direction: column;
+      align-items: center;
     }
+    
     .sweets img {
-      width: 40%;
+      width: 25%;
+    }
+
+    .skygift {
+      animation: fall 2s linear infinite;
     }
   }
-  
+
   @keyframes fall {
     from {
       transform: translateY(-100%);
